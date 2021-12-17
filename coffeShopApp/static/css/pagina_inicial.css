@@ -118,19 +118,19 @@ body {
 }
 
 .coffe{
-    background: url("{%static 'img/coffe/coffe1.jpg' %}") no-repeat;
+    background: url("../img/coffe/coffe1.jpg") no-repeat;
     background-position: center center;
     background-size: cover;
 }
 
 .tea{
-    background: url("tea.png") no-repeat;
+    background: url("../img/tea.png") no-repeat;
     background-position: center center;
     background-size: cover;
 }
 
 .smoothie{
-    background: url("smoothie.png") no-repeat;
+    background: url("../img/smoothie.png") no-repeat;
     background-position: center center;
     background-size: cover;
 }
