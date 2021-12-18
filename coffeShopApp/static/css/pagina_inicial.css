@@ -1,25 +1,3 @@
-:root {
-    --cor-fundo: whitesmoke;
-    --cinza-claro: #E5E5E5;
-    --rosa: #E9AFC0;
-    --rosa-escuro: #F87DA1;
-}
-html{
-    width: 100vw;
-}
-
-body {
-    background:  var(--cor-fundo);
-    margin: 0px;
-    min-width: 90vw;
-}
-
-.corpo {
-    min-width: 90vw;
-    margin: 40px auto;
-    padding: 10px;
-}
-
 .titulo {   
     display: flex;
     flex-direction: row;
@@ -106,16 +84,8 @@ body {
 }
 
 @media screen and (min-width: 768px){
-    section, .cabecalho{
+    section{
         min-width: 1300px;
-    }
-    .cabecalho{
-        height: 60px;
-    }
-    .item-cabelho-menu{
-        text-align: center;
-        padding: 5px;
-        margin: 15px;
     }
     .campo-pesquisa{
         max-width: 800px;
