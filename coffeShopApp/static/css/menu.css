@@ -34,3 +34,19 @@
     align-items: center;
     height: 24px;
 }
+
+
+@media screen and (min-width: 768px){
+    .cabecalho{
+        min-width: 1300px;
+        width: 100%;
+    }
+    .cabecalho{
+        height: 60px;
+    }
+    .item-cabelho-menu{
+        text-align: center;
+        padding: 5px;
+        margin: 15px;
+    }
+}

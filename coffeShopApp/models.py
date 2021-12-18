@@ -9,8 +9,9 @@ class Usuario(models.Model):
 class Produto(models.Model):
     nome_produto = models.CharField(max_length=50)
     descricao = models.CharField(max_length=250)
-    tamanho = models.IntegerField()
     preco = models.FloatField()
+    categoria = models.CharField(max_length=50)
+    #tamanho = models.CharField(max_length=10)
 
 class Pedido(models.Model):
     id_usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE)
