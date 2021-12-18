@@ -28,9 +28,24 @@ def catalogo_produtos_smoothie(requisicao):
     }
     return render(requisicao, 'catalogo_produtos.html', dados)
 
+def buscar_produto(requisicao):
+    lista_produtos = Produto.objects.all()
+
+    if 'buscar' in requisicao.GET:
+        texto_busca = requisicao.GET['buscar']
+        lista_produtos = lista_produtos.filter(nome_produto__icontains=texto_busca)
+        dados = {
+            'produtos': lista_produtos
+        }
+
+    return render(requisicao, 'catalogo_produtos.html', dados)
+
+
+### CRUD PRODUTO ###
 def filtrar_produto_por_categoria(categoria_produto):
     return Produto.objects.filter(categoria=categoria_produto)
-    
+
+
 def inserir_produto(requisicao):
     produto = Produto(nome_produto="Capuccino", descricao= "Cafe com leite", preco=0.50, categoria="Coffe")
     produto.save()
