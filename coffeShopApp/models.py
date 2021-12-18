@@ -11,6 +11,7 @@ class Produto(models.Model):
     descricao = models.CharField(max_length=250)
     preco = models.FloatField()
     categoria = models.CharField(max_length=50)
+    foto_produto = models.ImageField(upload_to='fotos/s', blank=True)
     #tamanho = models.CharField(max_length=10)
 
 class Pedido(models.Model):
