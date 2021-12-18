@@ -16,30 +16,6 @@
     height: 56px;
 }
 
-.campo-pesquisa{
-    display: flex;
-    align-items: center;
-    min-width: 200px;
-    height: 30px;
-
-    background-color: var(--cinza-claro);
-    border: none;
-    border-radius: 20px;
-    margin-right:10px; 
-}
-.campo-pesquisa input{
-    background-color: var(--cinza-claro);
-    border: none;
-    border-radius: 20px;
-    height: 25px;
-    min-width: 300px;
-}
-.campo-pesquisa svg{
-    width: 14px;
-    margin-left: 8px;
-    margin-right: 4px;
-}
-
 .container{
     margin: 10px;
     padding: 5px;
@@ -86,10 +62,6 @@
 @media screen and (min-width: 768px){
     section{
         min-width: 1300px;
-    }
-    .campo-pesquisa{
-        max-width: 800px;
-        margin: auto;
     }
     .corpo{
         margin:20px
