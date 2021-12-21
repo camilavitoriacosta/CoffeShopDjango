@@ -47,5 +47,17 @@ def filtrar_produto_por_categoria(categoria_produto):
 
 
 def inserir_produto(requisicao):
-    produto = Produto(nome_produto="Capuccino", descricao= "Cafe com leite", preco=0.50, categoria="Coffe")
+    nome = requisicao.POST['nome']
+    descricao = requisicao.POST['descricao']
+    preco = requisicao.POST['preco']
+    categoria = requisicao.POST['categoria']
+    foto = requisicao.FILES['foto-produto']
+
+    produto = Produto(nome_produto=nome, descricao=descricao, preco=preco, categoria=categoria, foto_produto=foto)
     produto.save()
+
+def cadastro_produto(requisicao):
+    if requisicao.method == 'POST':
+        inserir_produto(requisicao)
+
+    return render(requisicao, 'cadastro_produtos.html')

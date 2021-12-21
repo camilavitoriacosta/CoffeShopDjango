@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+<!-- {% load static %} -->    
+{% block content %}
+
+<section class="produto--cadastro">
+    <form action="{% url 'cadastro_produto'%}" method="post"> {% csrf_token %}
+        <h1 class="titulo"> Cadastrar produto </h1>
+        
+       <div class="produto--nome--cadastro">
+        <h2 class="titulo--form"> Nome </h2>
+        <input class="input--texto" type="text" id="nome" name="nome">
+       </div>
+        
+       <div class="produto--descricao--cadastro">
+        <h2 class="titulo--form" > Descrição </h2>
+        <input class="input--texto" type="text-area" id="descricao" name="descricao">
+       </div>
+
+        <div class="produto--preco--cadastro">
+            <h2 class="titulo--form"> Preço </h2>
+            <input class="input--texto" type="text" id="preco" name="preco">
+        </div>
+
+        <div class="produto--categoria--cadastro">
+            <h2 class="titulo--form"> Categoria </h2>
+      
+            <div class="categoria--opcoes">
+                <div class="categoria--radio--button">
+                    <input type="radio" name="produto--categoria" id="coffe" value="coffe" name="categoria">
+                    <label for="coffe">Coffe</label>
+                </div>
+        
+                <div class="categoria--radio--button">
+                    <input type="radio" name="produto--categoria" id="tea" value="tea" name="categoria">
+                    <label for="tea"> Tea </label>
+                </div>
+        
+                <div class="categoria--radio--button">
+                    <input type="radio" name="produto--categoria" id="smoothie" value="smoothie" name="categoria">
+                    <label for="smoothie"> Smoothie </label>
+                </div>
+            </div>
+
+        <div class="produto--foto">
+            <h2 class="titulo--form"> Foto do produto </h2>
+            <input type="file" accept="image/*" name="foto-produto"/>
+        </div>
+    </div>
+
+        <button type="submit" class="botao"> Cadastrar </button>
+    </form>
+</section>
+
+
+{% endblock %}
+
+
