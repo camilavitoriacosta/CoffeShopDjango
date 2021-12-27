@@ -3,28 +3,29 @@
 {% block content %}
 
 <section class="produto--cadastro">
-    <form action="{% url 'cadastro_produto'%}" method="post"> {% csrf_token %}
+    <form action="{% url 'cadastro_produto'%}" method="post"> 
+        {% csrf_token %}
         <h1 class="titulo"> Cadastrar produto </h1>
         
        <div class="produto--nome--cadastro">
         <h2 class="titulo--form"> Nome </h2>
-        <input class="input--texto" type="text" id="nome" name="nome">
+        <input class="input--texto" type="text" id="nome" name="nome" required>
        </div>
         
        <div class="produto--descricao--cadastro">
         <h2 class="titulo--form" > Descrição </h2>
-        <input class="input--texto" type="text-area" id="descricao" name="descricao">
+        <input class="input--texto" type="text-area" id="descricao" name="descricao" required>
        </div>
 
         <div class="produto--preco--cadastro">
             <h2 class="titulo--form"> Preço </h2>
-            <input class="input--texto" type="text" id="preco" name="preco">
+            <input class="input--texto" type="number" id="preco" name="preco" step="0.01"  min='0' required>
         </div>
 
         <div class="produto--categoria--cadastro">
             <h2 class="titulo--form"> Categoria </h2>
-      
-            <div class="categoria--opcoes">
+            <input class="input--texto" type="text" id="categoria" name="categoria" required>
+            <!-- <div class="categoria--opcoes">
                 <div class="categoria--radio--button">
                     <input type="radio" name="produto--categoria" id="coffe" value="coffe" name="categoria">
                     <label for="coffe">Coffe</label>
@@ -39,12 +40,12 @@
                     <input type="radio" name="produto--categoria" id="smoothie" value="smoothie" name="categoria">
                     <label for="smoothie"> Smoothie </label>
                 </div>
-            </div>
+            </div> -->
 
-        <div class="produto--foto">
+        <!-- <div class="produto--foto">
             <h2 class="titulo--form"> Foto do produto </h2>
-            <input type="file" accept="image/*" name="foto-produto"/>
-        </div>
+            <input type="file" accept="image/*" name="foto-produto" required/>
+        </div> -->
     </div>
 
         <button type="submit" class="botao"> Cadastrar </button>

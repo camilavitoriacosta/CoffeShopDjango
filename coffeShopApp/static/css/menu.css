@@ -28,6 +28,12 @@
     width: 100px;
     height: 24px;
 }
+
+.item-cabelho-menu:hover{
+    color: var(--rosa-escuro);
+    font-size: 24px;
+}
+
 .cabecalho .icon{
     display: flex;
     justify-content: center;

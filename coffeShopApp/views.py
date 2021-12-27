@@ -51,9 +51,10 @@ def inserir_produto(requisicao):
     descricao = requisicao.POST['descricao']
     preco = requisicao.POST['preco']
     categoria = requisicao.POST['categoria']
-    foto = requisicao.FILES['foto-produto']
+    #foto = requisicao.FILES['foto-produto']
 
-    produto = Produto(nome_produto=nome, descricao=descricao, preco=preco, categoria=categoria, foto_produto=foto)
+    # produto = Produto(nome_produto=nome, descricao=descricao, preco=preco, categoria=categoria, foto_produto=foto)
+    produto = Produto(nome_produto=nome, descricao=descricao, preco=preco, categoria=categoria)
     produto.save()
 
 def cadastro_produto(requisicao):
